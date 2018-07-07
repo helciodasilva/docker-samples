@@ -1,0 +1,5 @@
+debian:
+  build: .
+  container_name: debian
+  privileged: true
+  tty: true
