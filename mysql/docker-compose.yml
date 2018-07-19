@@ -1,0 +1,14 @@
+version: '2.1'
+
+services:
+  
+  db:
+    image: mysql:5.7
+    container_name: db-${TAG}
+    command: mysqld --sql_mode="" --lower_case_table_names=1
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=lecom
+    ports:
+      - "3306:3306"
