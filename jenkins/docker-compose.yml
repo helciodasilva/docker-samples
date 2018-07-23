@@ -2,7 +2,8 @@ version: '2'
 services:
     jenkins:
         container_name: jenkins
-        image: jeffersonsouza/jenkins:alpine
+        build:
+            context: .
         privileged: true
         restart: always
         ports:
