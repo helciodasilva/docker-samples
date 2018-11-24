@@ -1,0 +1,12 @@
+version: "3"
+services:
+  database:
+    image: wnameless/oracle-xe-11g
+    container_name: database
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+    ports:
+      - "49160:22"
+      - "49161:1521"
