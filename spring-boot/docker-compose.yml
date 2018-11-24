@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app-service:
+    build:
+        context: .
+    container_name: app-service
+    volumes:
+      - ./pacotes/:/app/
+    ports:
+      - "8080:8080"
