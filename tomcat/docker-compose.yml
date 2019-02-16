@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  tomcat:
+    image: 'bitnami/tomcat:latest'
+    ports:
+      - '8080:8080'
+    environment:
+      - TOMCAT_USERNAME=admin
+      - TOMCAT_PASSWORD=admin
+      - TOMCAT_ALLOW_REMOTE_MANAGEMENT=1
